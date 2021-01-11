@@ -4,14 +4,6 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/home"
-            android:icon="@android:drawable/ic_lock_power_off"
-            android:title="Control" />
-        <item
-            android:id="@+id/nav_registro"
-            android:icon="@android:drawable/ic_menu_edit"
-            android:title="Registros" />
 
         <item
             android:id="@+id/control2"
