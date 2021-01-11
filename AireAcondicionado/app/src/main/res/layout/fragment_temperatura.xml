@@ -9,25 +9,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@mipmap/fondo"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Temperatura" />
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Temperatura"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:src="@tools:sample/avatars" />
+            android:layout_width="330dp"
+            android:layout_height="229dp"
+            android:layout_marginBottom="20dp"
+            tools:src="@mipmap/termometro" />
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Valor del sensor" />
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Valor del sensor"
+            android:textSize="24sp" />
 
         <NumberPicker
             android:id="@+id/numberTemperatura"
@@ -40,7 +51,10 @@
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cambiar temperatura a " />
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Cambiar temperatura a "
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button"

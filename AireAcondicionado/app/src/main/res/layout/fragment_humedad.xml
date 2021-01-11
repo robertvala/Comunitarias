@@ -4,47 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HumedadFragment">
+    tools:context=".TemperaturaFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_marginBottom="20dp"
+        android:background="@mipmap/fondo"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Humedad" />
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Humedad"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:src="@tools:sample/avatars" />
+            android:id="@+id/imageView5"
+            android:layout_width="330dp"
+            android:layout_height="229dp"
+            android:layout_marginBottom="20dp"
+            tools:src="@mipmap/humedad" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Valor del sensor" />
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Valor del sensor"
+            android:textSize="24sp" />
 
         <NumberPicker
-            android:layout_width="match_parent"
+            android:id="@+id/numberTemperatura"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
         </NumberPicker>
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cambiar humedad a :" />
+            android:layout_marginBottom="20dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:text="Cambiar humedad"
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cambiar sensor" />
+            android:text="Modificar temperatura" />
+
     </LinearLayout>
 </FrameLayout>
