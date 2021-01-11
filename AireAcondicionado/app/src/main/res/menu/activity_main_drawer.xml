@@ -12,11 +12,17 @@
             android:id="@+id/nav_registro"
             android:icon="@android:drawable/ic_menu_edit"
             android:title="Registros" />
+<<<<<<< HEAD
+=======
+        <item
+            android:id="@+id/control2"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Control" />
+>>>>>>> c6723e2f5b89480f27be954dac5cb0fb28918aaf
 
         <item
-            android:id="@+id/nav_tiempo"
-            android:icon="@android:drawable/ic_lock_idle_alarm"
-            android:title="Temporizador" />
-        <item android:title="Acerca de nosotros" />
+            android:id="@+id/blankFragment"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="Acerca de nosotros" />
     </group>
 </menu>
