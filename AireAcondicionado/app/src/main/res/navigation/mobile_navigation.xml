@@ -22,6 +22,11 @@
         android:name="com.example.aireacondicionado.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <activity
+        android:id="@+id/control2"
+        android:name="com.example.aireacondicionado.Control"
+        android:label="activity_control"
+        tools:layout="@layout/activity_control" />
     <fragment
         android:id="@+id/blankFragment"
         android:name="com.example.aireacondicionado.BlankFragment"

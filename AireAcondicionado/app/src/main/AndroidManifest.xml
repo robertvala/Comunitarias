@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.aireacondicionado">
+    package="com.example.aireacondicionado" >
 
     <application
         android:allowBackup="true"
@@ -8,12 +8,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:theme="@style/Theme.AireAcondicionado" >
+        <activity
+            android:name=".Control"
+            android:label="@string/title_activity_control"
+            android:theme="@style/Theme.AireAcondicionado.NoActionBar" >
+        </activity>
+
         android:theme="@style/Theme.AireAcondicionado">
         <activity android:name=".informacion"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AireAcondicionado.NoActionBar">
+            android:theme="@style/Theme.AireAcondicionado.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
