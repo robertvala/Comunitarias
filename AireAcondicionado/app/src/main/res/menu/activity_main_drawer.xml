@@ -16,10 +16,10 @@
             android:id="@+id/nav_control"
             android:icon="@android:drawable/ic_menu_preferences"
             android:title="Control" />
+
         <item
-            android:id="@+id/nav_tiempo"
-            android:icon="@android:drawable/ic_lock_idle_alarm"
-            android:title="Temporizador" />
-        <item android:title="Acerca de nosotros" />
+            android:id="@+id/blankFragment"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="Acerca de nosotros" />
     </group>
 </menu>
