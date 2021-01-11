@@ -34,26 +34,4 @@
         app:fabSize="normal"
         app:srcCompat="@android:drawable/ic_menu_info_details" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="132dp"
-        android:layout_height="131dp"
-        android:scaleType="fitXY"
-        android:translationX="350px"
-        android:translationY="800px"
-        android:background="@null"
-        app:srcCompat="@mipmap/boton" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="187dp"
-        android:layout_height="78dp"
-        android:text="Solar A/C "
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="100px"
-        android:textStyle="italic"
-        android:translationX="299px"
-        android:translationY="650px" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
