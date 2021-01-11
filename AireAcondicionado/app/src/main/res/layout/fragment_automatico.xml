@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@mipmap/fondo"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".automatico">
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="325dp"
+        android:layout_height="77dp"
+        android:gravity="center_vertical"
+        android:text="Hora de inicio "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#F4511E" />
+
+    <EditText
+        android:id="@+id/editTextTime4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="325dp"
+        android:layout_height="79dp"
+        android:gravity="center_vertical"
+        android:text="Hora de final"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#F4511E" />
+
+    <EditText
+        android:id="@+id/editTextTime3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="69dp"
+        android:gravity="center_vertical"
+        android:text="Temperatura de control"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#F4511E" />
+
+    <EditText
+        android:id="@+id/editTextTime8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="353dp"
+        android:layout_height="59dp"
+        android:text="Repetición"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#F4511E" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+        android:layout_width="303dp"
+        android:layout_height="73dp"
+        android:text="Un solo vez  "
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="304dp"
+        android:layout_height="67dp"
+        android:text="Repetir diariamente "
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="129dp"
+        android:layout_height="68dp"
+        android:gravity="center_horizontal"
+        android:text="Enviar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:backgroundTint="#F4511E" />
+
+</LinearLayout>

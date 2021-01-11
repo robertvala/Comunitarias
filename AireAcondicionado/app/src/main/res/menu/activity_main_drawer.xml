@@ -18,6 +18,10 @@
             android:title="Control" />
 
         <item
+            android:id="@+id/automatico"
+            android:icon="@android:drawable/btn_star_big_off"
+            android:title="Programación Automatica" />
+        <item
             android:id="@+id/blankFragment"
             android:icon="@android:drawable/ic_menu_info_details"
             android:title="Acerca de nosotros" />
