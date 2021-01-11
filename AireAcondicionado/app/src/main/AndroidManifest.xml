@@ -14,6 +14,9 @@
             android:label="@string/title_activity_control"
             android:theme="@style/Theme.AireAcondicionado.NoActionBar" >
         </activity>
+
+        android:theme="@style/Theme.AireAcondicionado">
+        <activity android:name=".informacion"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
