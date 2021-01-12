@@ -24,12 +24,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/termometro" />
-
         <TextView
             android:id="@+id/textView12"
             android:layout_width="match_parent"
@@ -38,6 +32,11 @@
             android:gravity="center"
             android:text="Valor del sensor"
             android:textSize="24sp" />
+
+        <WebView
+            android:id="@+id/webUbdidots"
+            android:layout_width="272dp"
+            android:layout_height="195dp" />
 
         <NumberPicker
             android:id="@+id/numberTemperatura"

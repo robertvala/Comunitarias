@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "584772688224",
+    "firebase_url": "https://comunitaraias-default-rtdb.firebaseio.com",
+    "project_id": "comunitaraias",
+    "storage_bucket": "comunitaraias.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584772688224:android:fd8531989bcb28a43ca605",
+        "android_client_info": {
+          "package_name": "com.example.aireacondicionado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584772688224-2r5ul0k3e6g7rr9hn6im12d3tkqknir9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwDdh2fJ5omh5tggwO80ho-77eYXpn_Q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584772688224-2r5ul0k3e6g7rr9hn6im12d3tkqknir9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584772688224:android:c7a22b1a641e80113ca605",
+        "android_client_info": {
+          "package_name": "com.example.aireacondicionado.ui.main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584772688224-2r5ul0k3e6g7rr9hn6im12d3tkqknir9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwDdh2fJ5omh5tggwO80ho-77eYXpn_Q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584772688224-2r5ul0k3e6g7rr9hn6im12d3tkqknir9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

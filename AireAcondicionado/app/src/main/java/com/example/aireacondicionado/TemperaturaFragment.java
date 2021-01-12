@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,9 +51,14 @@ public class TemperaturaFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //WebView myWebView = root.findbyV
+        //myWebView.loadUrl("http://www.example.com");
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
+
         }
     }
 
@@ -59,6 +66,13 @@ public class TemperaturaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View root = inflater.inflate(R.layout.fragment_temperatura, container, false);
+        //final TextView textView = root.findViewById(R.id.text_home);
+        WebView webView=root.findViewById(R.id.webUbdidots);
+        webView.loadUrl("https://stem.ubidots.com/app/dashboards/public/widget/XZNHnr8zCknHysq19Ioc-vT8IWfdWW5hlUY_j9IcL9I");
         return inflater.inflate(R.layout.fragment_temperatura, container, false);
+
     }
+
+
 }
