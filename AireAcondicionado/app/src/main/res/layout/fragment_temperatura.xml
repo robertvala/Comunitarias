@@ -6,59 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".TemperaturaFragment">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@mipmap/fondo"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:gravity="center">
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_width="345dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="21dp"
             android:gravity="center"
             android:text="Temperatura"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.606"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024" />
 
         <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:id="@+id/temp"
+            android:layout_width="189dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="184dp"
             android:gravity="center"
-            android:text="Valor del sensor"
-            android:textSize="24sp" />
+            android:text="%"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <WebView
-            android:id="@+id/webUbdidots"
-            android:layout_width="272dp"
-            android:layout_height="195dp" />
+        <ProgressBar
+            android:id="@+id/progressBarcirclo"
+            android:layout_width="341dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="76dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            tools:progress="60" />
 
-        <NumberPicker
-            android:id="@+id/numberTemperatura"
+        <ImageButton
+            android:id="@+id/buttonmas"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </NumberPicker>
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:src="@mipmap/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.293"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarcirclo"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/buttonmenos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:src="@mipmap/minus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.745"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarcirclo"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/temptext"
+            style="@android:style/Widget.DeviceDefault.EditText"
+            android:layout_width="198dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
             android:gravity="center"
-            android:text="Cambiar temperatura a "
-            android:textSize="18sp" />
+            android:inputType="number"
+            android:shadowColor="#FFFFFF"
+            android:text="Ingresar temperatura"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FB8C00"
+            android:textIsSelectable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonmenos"
+            app:layout_constraintVertical_bias="0.111" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Modificar temperatura" />
+            android:text="enviar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/temptext"
+            app:layout_constraintVertical_bias="0.266" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -1,14 +1,9 @@
 package com.example.aireacondicionado;
 
 import android.os.Bundle;
+import android.widget.ProgressBar;
 
 import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,7 +16,8 @@ public class TemperaturaFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    private ProgressBar mProgresbar;
+    private TextView
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -62,17 +58,6 @@ public class TemperaturaFragment extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_temperatura, container, false);
-        //final TextView textView = root.findViewById(R.id.text_home);
-        WebView webView=root.findViewById(R.id.webUbdidots);
-        webView.loadUrl("https://stem.ubidots.com/app/dashboards/public/widget/XZNHnr8zCknHysq19Ioc-vT8IWfdWW5hlUY_j9IcL9I");
-        return inflater.inflate(R.layout.fragment_temperatura, container, false);
-
-    }
 
 
 }

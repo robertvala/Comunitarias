@@ -6,40 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".HumedadFragment">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="754dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="734dp"
         android:background="@mipmap/fondo"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:gravity="center">
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_width="345dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="21dp"
             android:gravity="center"
             android:text="Humedad"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="294dp"
-            android:layout_height="207dp"
-            android:layout_margin="40dp"
-            android:src="@mipmap/humedad" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07" />
 
         <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:id="@+id/temp"
+            android:layout_width="236dp"
+            android:layout_height="102dp"
             android:gravity="center"
-            android:text="Valor del sensor"
-            android:textSize="24sp" />
+            android:text="15%"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="@+id/progressBarcirclo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/progressBarcirclo" />
 
-    </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBarcirclo"
+            android:layout_width="425dp"
+            android:layout_height="342dp"
+            android:layout_marginTop="76dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.274"
+            tools:progress="15" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="266dp"
+            android:layout_height="54dp"
+            android:text="Humedad en la habitación"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#F4511E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarcirclo"
+            app:layout_constraintVertical_bias="0.525" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
