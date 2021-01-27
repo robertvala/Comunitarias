@@ -37,4 +37,14 @@
         android:name="com.example.aireacondicionado.automatico"
         android:label="Programación Automática"
         tools:layout="@layout/fragment_automatico" />
+    <fragment
+        android:id="@+id/temperaturaFragment"
+        android:name="com.example.aireacondicionado.TemperaturaFragment"
+        android:label="fragment_temperatura"
+        tools:layout="@layout/fragment_temperatura" />
+    <fragment
+        android:id="@+id/fragment_Temperatura_Control"
+        android:name="com.example.aireacondicionado.Fragment_Temperatura_Control"
+        android:label="fragment__temperatura__control"
+        tools:layout="@layout/fragment__temperatura__control" />
 </navigation>

@@ -20,7 +20,7 @@
         android:textColor="#F4511E" />
 
     <EditText
-        android:id="@+id/editTextTime4"
+        android:id="@+id/editTextInicio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -37,7 +37,7 @@
         android:textColor="#F4511E" />
 
     <EditText
-        android:id="@+id/editTextTime3"
+        android:id="@+id/editTextFinal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -54,7 +54,7 @@
         android:textColor="#F4511E" />
 
     <EditText
-        android:id="@+id/editTextTime8"
+        android:id="@+id/editTextControl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -69,23 +69,23 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#F4511E" />
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-        android:layout_width="303dp"
-        android:layout_height="73dp"
-        android:text="Un solo vez  "
-        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/txtRepeticion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="TextView" />
 
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="304dp"
-        android:layout_height="67dp"
-        android:text="Repetir diariamente "
-        android:textSize="24sp" />
+    <Spinner
+        android:id="@+id/spRepeticion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnEnviarAuto"
         android:layout_width="129dp"
         android:layout_height="68dp"
         android:gravity="center_horizontal"
