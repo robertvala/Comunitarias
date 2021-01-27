@@ -2,11 +2,21 @@ package com.example.aireacondicionado;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.core.view.ViewPropertyAnimatorListener;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +33,9 @@ public class HumedadFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    ProgressBar pbHumedad;
+    TextView txtHumedad;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     public HumedadFragment() {
         // Required empty public constructor
@@ -52,13 +65,46 @@ public class HumedadFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            //txtMensaje=getActivity().findViewById(R.id.txtMensaje);
+
         }
+
+        //txtMensaje.setText("Hola");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_humedad, container, false);
+        View root= inflater.inflate(R.layout.fragment_humedad, container, false);
+        txtHumedad=root.findViewById(R.id.txtHumedad);
+        pbHumedad=root.findViewById(R.id.pbHumedad);
+        cargarDatos();
+        return root;
     }
+
+    void cargarDatos(){
+        DatabaseReference myRef = database.getReference("Control");
+        // Read from the database
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                if(dataSnapshot.exists()) {
+                    String value = dataSnapshot.child("Humedad").getValue().toString();
+                    pbHumedad.setProgress(Integer.parseInt(value));
+                    txtHumedad.setText(value+"%");
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+
+            }
+        });
+    }
+
+
 }

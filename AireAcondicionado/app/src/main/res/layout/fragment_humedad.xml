@@ -29,44 +29,29 @@
             app:layout_constraintVertical_bias="0.07" />
 
         <TextView
-            android:id="@+id/temp"
+            android:id="@+id/txtHumedad"
             android:layout_width="236dp"
             android:layout_height="102dp"
             android:gravity="center"
             android:text="15%"
             android:textSize="50sp"
-            app:layout_constraintBottom_toBottomOf="@+id/progressBarcirclo"
+            app:layout_constraintBottom_toBottomOf="@+id/pbHumedad"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/progressBarcirclo" />
+            app:layout_constraintTop_toTopOf="@+id/pbHumedad" />
+
 
         <ProgressBar
-            android:id="@+id/progressBarcirclo"
-            android:layout_width="425dp"
-            android:layout_height="342dp"
-            android:layout_marginTop="76dp"
+            android:id="@+id/pbHumedad"
+            android:layout_width="341dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="136dp"
             android:indeterminateOnly="false"
             android:progressDrawable="@drawable/circle"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.274"
-            tools:progress="15" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="266dp"
-            android:layout_height="54dp"
-            android:text="Humedad en la habitación"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#F4511E"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBarcirclo"
-            app:layout_constraintVertical_bias="0.525" />
+            tools:progress="60" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,10 +30,10 @@
             app:layout_constraintVertical_bias="0.024" />
 
         <TextView
-            android:id="@+id/temp"
+            android:id="@+id/txtTemp"
             android:layout_width="189dp"
             android:layout_height="38dp"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="216dp"
             android:gravity="center"
             android:text="%"
             android:textSize="24sp"
@@ -42,21 +42,25 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ProgressBar
-            android:id="@+id/progressBarcirclo"
+            android:id="@+id/pbTemperatura"
             android:layout_width="341dp"
             android:layout_height="260dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="50dp"
             android:indeterminateOnly="false"
             android:progressDrawable="@drawable/circle"
+            app:layout_constraintBottom_toTopOf="@+id/btnMas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.0"
             tools:progress="60" />
 
         <ImageButton
-            android:id="@+id/buttonmas"
+            android:id="@+id/btnMas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="216dp"
             android:background="?attr/selectableItemBackground"
             android:scaleX="0.5"
             android:scaleY="0.5"
@@ -65,13 +69,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.293"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBarcirclo"
+            app:layout_constraintTop_toBottomOf="@+id/pbHumedad"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
-            android:id="@+id/buttonmenos"
+            android:id="@+id/btnMenos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="216dp"
             android:background="?attr/selectableItemBackground"
             android:scaleX="0.5"
             android:scaleY="0.5"
@@ -80,11 +85,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.745"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBarcirclo"
+            app:layout_constraintTop_toBottomOf="@+id/pbHumedad"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/temptext"
+            android:id="@+id/editTextTemperatura"
             style="@android:style/Widget.DeviceDefault.EditText"
             android:layout_width="198dp"
             android:layout_height="42dp"
@@ -93,25 +98,24 @@
             android:gravity="center"
             android:inputType="number"
             android:shadowColor="#FFFFFF"
-            android:text="Ingresar temperatura"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#FB8C00"
             android:textIsSelectable="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonmenos"
+            app:layout_constraintTop_toBottomOf="@+id/btnMenos"
             app:layout_constraintVertical_bias="0.111" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnEnviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="enviar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/temptext"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTemperatura"
             app:layout_constraintVertical_bias="0.266" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
