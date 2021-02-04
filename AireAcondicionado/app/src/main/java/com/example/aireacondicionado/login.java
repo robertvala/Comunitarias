@@ -23,8 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
         /**
- * Demonstrate Firebase Authentication using a custom minted token. For more information, see:
- * https://firebase.google.com/docs/auth/android/custom-auth
+ * Autorizacion de ingreso usando FireBase
  */
         public class login extends AppCompatActivity{
                 //Varibales públicas
@@ -52,6 +51,7 @@ import androidx.appcompat.app.AppCompatActivity;
                                 }
                         }
                 }
+
                 public void iniciarSesion(View view) {
                         System.out.println("Presionado Iniciar Sesion");
                         Intent signInIntent = mGoogleSignInClient.getSignInIntent();

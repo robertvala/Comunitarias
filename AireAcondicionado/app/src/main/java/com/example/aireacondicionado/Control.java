@@ -13,10 +13,12 @@ import com.example.aireacondicionado.ui.main.SectionsPagerAdapter;
 
 public class Control extends AppCompatActivity {
 
+    //Metodo que se ejecuta al iniciar la actividad
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control);
+        //Convierte la actividad en a tipo tabulado
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);

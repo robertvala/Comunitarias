@@ -19,37 +19,33 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link HumedadFragment#newInstance} factory method to
- * create an instance of this fragment.
+ *Inicio de la programacion del fragmento Humedad
  */
 public class HumedadFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    // paramatros de inicializacion del fragmento
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    //Inicio de elementos del fragmento
     ProgressBar pbHumedad;
     TextView txtHumedad;
+    //Inicio de las referencias de la base de FireBase
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     public HumedadFragment() {
-        // Required empty public constructor
+        // Se requiere crear un contructor vacio que sea vacio
     }
 
     /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
+     * Se crea este metodo para crear una nueva instancia del
+     * fragmento utilizando los parametros:
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HumedadFragment.
+     * @param param1 Parametro 1.
+     * @param param2 Parametro 2.
+     * @returna una nueva instancia de este fragmento
      */
-    // TODO: Rename and change types and number of parameters
     public static HumedadFragment newInstance(String param1, String param2) {
         HumedadFragment fragment = new HumedadFragment();
         Bundle args = new Bundle();
@@ -58,31 +54,31 @@ public class HumedadFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+    //Metodo que se ejecuta al iniciar el fragmento
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-            //txtMensaje=getActivity().findViewById(R.id.txtMensaje);
-
         }
-
-        //txtMensaje.setText("Hola");
     }
-
+    //Metodo que se ejecuta para crear la vista del fragmento
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //Colocar la referencia de cada una de los elementos del fragmento
         View root= inflater.inflate(R.layout.fragment_humedad, container, false);
         txtHumedad=root.findViewById(R.id.txtHumedad);
         pbHumedad=root.findViewById(R.id.pbHumedad);
+        //Llamado de metodos necesarios
         cargarDatos();
         return root;
     }
-
+    /**
+     * Metodo no recibe ningun parametro
+     * Lectura del dato de humedad
+     *De la base de datos en tiempo real
+     */
     void cargarDatos(){
         DatabaseReference myRef = database.getReference("Control");
         // Read from the database

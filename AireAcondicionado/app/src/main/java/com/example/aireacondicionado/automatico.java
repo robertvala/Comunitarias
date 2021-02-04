@@ -18,40 +18,41 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link automatico#newInstance} factory method to
- * create an instance of this fragment.
+*Inicio de la programacion del fragmento que muestra la configuracion automatica
+ * Del aire acondicionado
  */
 public class automatico extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    // paramatros de inicializacion del fragmento
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    //Inicio de elementos del fragmento
     EditText editTextInicio,editTextFinal,editTextTemperatura;
     TextView txtrepeticion;
     Spinner spRepetecion;
     Button btnEnviarAuto;
+
+    //Inicio de las referencias de la base de FireBase
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("Control").child("Automatico");
 
     public automatico() {
-        // Required empty public constructor
+        // Se requiere crear un contructor vacio que sea vacio
     }
 
     /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
+     * Se crea este metodo para crear una nueva instancia del
+     * fragmento utilizando los parametros:
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment automatico.
+     * @param param1 Parametro 1.
+     * @param param2 Parametro 2.
+     * @returna una nueva instancia de este fragmento
      */
-    // TODO: Rename and change types and number of parameters
+
     public static automatico newInstance(String param1, String param2) {
         automatico fragment = new automatico();
         Bundle args = new Bundle();
@@ -61,6 +62,7 @@ public class automatico extends Fragment {
         return fragment;
     }
 
+    //Metodo que se ejecuta al iniciar el fragmento
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,27 +71,39 @@ public class automatico extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+//Metodo que se ejecuta para crear la vista del fragmento
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflar el layout del fragmento
         View root=inflater.inflate(R.layout.fragment_automatico, container, false);
+
+        //Colocar la referencia de cada una de los elementos del fragmento
         editTextFinal=root.findViewById(R.id.editTextFinal);
         editTextInicio=root.findViewById(R.id.editTextInicio);
         editTextTemperatura=root.findViewById(R.id.editTextControl);
         btnEnviarAuto=root.findViewById(R.id.btnEnviarAuto);
         txtrepeticion=root.findViewById(R.id.txtRepeticion);
         spRepetecion=root.findViewById(R.id.spRepeticion);
+
+        //Configuracion del spinner
         String [] opciones={"Diariamente","Una sola vez"};
         ArrayAdapter<String> adapter= new ArrayAdapter<String>(getContext(), android.R.layout.simple_dropdown_item_1line,opciones);
         spRepetecion.setAdapter(adapter);
         String repeticion=spRepetecion.getSelectedItem().toString();
         txtrepeticion.setText(repeticion);
+
+        //Llamado del metodo enviar
         enviar();
         return root;
     }
 
+
+    /**
+     * Metodo no recibe ningun parametro
+     * se encarga de setear una accion al boton Enviar
+     *Envia los parametros a la base de datos
+
+     */
     void enviar(){
         btnEnviarAuto.setOnClickListener(new View.OnClickListener() {
             @Override
